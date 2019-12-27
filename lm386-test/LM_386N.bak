@@ -1,0 +1,500 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_User
+LIBS:eSim_Plot
+LIBS:eSim_PSpice
+LIBS:LM_386N-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L eSim_NPN Q3
+U 1 1 5E058E47
+P 3850 4850
+F 0 "Q3" H 3750 4900 50  0000 R CNN
+F 1 "eSim_NPN" H 3800 5000 50  0000 R CNN
+F 2 "" H 4050 4950 29  0000 C CNN
+F 3 "" H 3850 4850 60  0000 C CNN
+	1    3850 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L eSim_PNP Q2
+U 1 1 5E058E6C
+P 3650 3750
+F 0 "Q2" H 3550 3800 50  0000 R CNN
+F 1 "eSim_PNP" H 3600 3900 50  0000 R CNN
+F 2 "" H 3850 3850 29  0000 C CNN
+F 3 "" H 3650 3750 60  0000 C CNN
+	1    3650 3750
+	1    0    0    1   
+$EndComp
+$Comp
+L eSim_R R2
+U 1 1 5E058E9B
+P 3700 2450
+F 0 "R2" H 3750 2580 50  0000 C CNN
+F 1 "15k" H 3750 2400 50  0000 C CNN
+F 2 "" H 3750 2430 30  0000 C CNN
+F 3 "" V 3750 2500 30  0000 C CNN
+	1    3700 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L eSim_R R3
+U 1 1 5E059006
+P 3700 3150
+F 0 "R3" H 3750 3280 50  0000 C CNN
+F 1 "15k" H 3750 3100 50  0000 C CNN
+F 2 "" H 3750 3130 30  0000 C CNN
+F 3 "" V 3750 3200 30  0000 C CNN
+	1    3700 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2650 3750 3050
+$Comp
+L PORT U1
+U 2 1 5E059040
+P 2200 3950
+F 0 "U1" H 2250 4050 30  0000 C CNN
+F 1 "PORT" H 2200 3950 30  0000 C CNN
+F 2 "" H 2200 3950 60  0000 C CNN
+F 3 "" H 2200 3950 60  0000 C CNN
+	2    2200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2850 3750 2850
+Connection ~ 3750 2850
+Wire Wire Line
+	3750 3350 3750 3550
+$Comp
+L eSim_R R4
+U 1 1 5E0591EF
+P 4200 3400
+F 0 "R4" H 4250 3530 50  0000 C CNN
+F 1 "150" H 4250 3350 50  0000 C CNN
+F 2 "" H 4250 3380 30  0000 C CNN
+F 3 "" V 4250 3450 30  0000 C CNN
+	1    4200 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4000 3450 3750 3450
+Connection ~ 3750 3450
+$Comp
+L eSim_R R5
+U 1 1 5E059247
+P 4850 3400
+F 0 "R5" H 4900 3530 50  0000 C CNN
+F 1 "1.35k" H 4900 3350 50  0000 C CNN
+F 2 "" H 4900 3380 30  0000 C CNN
+F 3 "" V 4900 3450 30  0000 C CNN
+	1    4850 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 3450 4650 3450
+$Comp
+L PORT U1
+U 3 1 5E059296
+P 6750 4100
+F 0 "U1" H 6800 4200 30  0000 C CNN
+F 1 "PORT" H 6750 4100 30  0000 C CNN
+F 2 "" H 6750 4100 60  0000 C CNN
+F 3 "" H 6750 4100 60  0000 C CNN
+	3    6750 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4450 3350 4450 3450
+Connection ~ 4450 3450
+$Comp
+L eSim_PNP Q5
+U 1 1 5E059311
+P 5250 3750
+F 0 "Q5" H 5150 3800 50  0000 R CNN
+F 1 "eSim_PNP" H 5200 3900 50  0000 R CNN
+F 2 "" H 5450 3850 29  0000 C CNN
+F 3 "" H 5250 3750 60  0000 C CNN
+	1    5250 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 3450 6150 3450
+Wire Wire Line
+	5150 3350 5150 3550
+$Comp
+L PORT U1
+U 4 1 5E0593DB
+P 9100 5250
+F 0 "U1" H 9150 5350 30  0000 C CNN
+F 1 "PORT" H 9100 5250 30  0000 C CNN
+F 2 "" H 9100 5250 60  0000 C CNN
+F 3 "" H 9100 5250 60  0000 C CNN
+	4    9100 5250
+	-1   0    0    1   
+$EndComp
+Connection ~ 5150 3450
+$Comp
+L eSim_R R7
+U 1 1 5E0594F1
+P 6350 3400
+F 0 "R7" H 6400 3530 50  0000 C CNN
+F 1 "15k" H 6400 3350 50  0000 C CNN
+F 2 "" H 6400 3380 30  0000 C CNN
+F 3 "" V 6400 3450 30  0000 C CNN
+	1    6350 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L eSim_PNP Q1
+U 1 1 5E05955D
+P 3050 3950
+F 0 "Q1" H 2950 4000 50  0000 R CNN
+F 1 "eSim_PNP" H 3000 4100 50  0000 R CNN
+F 2 "" H 3250 4050 29  0000 C CNN
+F 3 "" H 3050 3950 60  0000 C CNN
+	1    3050 3950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3150 3750 3450 3750
+$Comp
+L eSim_R R1
+U 1 1 5E0595CB
+P 2550 4550
+F 0 "R1" H 2600 4680 50  0000 C CNN
+F 1 "50k" H 2600 4500 50  0000 C CNN
+F 2 "" H 2600 4530 30  0000 C CNN
+F 3 "" V 2600 4600 30  0000 C CNN
+	1    2550 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 4450 2600 3950
+Wire Wire Line
+	2450 3950 2850 3950
+$Comp
+L PORT U1
+U 1 1 5E0596E2
+P 5150 3100
+F 0 "U1" H 5200 3200 30  0000 C CNN
+F 1 "PORT" H 5150 3100 30  0000 C CNN
+F 2 "" H 5150 3100 60  0000 C CNN
+F 3 "" H 5150 3100 60  0000 C CNN
+	1    5150 3100
+	0    1    1    0   
+$EndComp
+Connection ~ 2600 3950
+Wire Wire Line
+	3750 3950 3750 4650
+Wire Wire Line
+	2600 4750 2600 5250
+Wire Wire Line
+	2600 5250 8850 5250
+Wire Wire Line
+	3750 5250 3750 5050
+Wire Wire Line
+	3150 4150 3150 5250
+Connection ~ 3150 5250
+$Comp
+L eSim_NPN Q4
+U 1 1 5E059A52
+P 5050 4850
+F 0 "Q4" H 4950 4900 50  0000 R CNN
+F 1 "eSim_NPN" H 5000 5000 50  0000 R CNN
+F 2 "" H 5250 4950 29  0000 C CNN
+F 3 "" H 5050 4850 60  0000 C CNN
+	1    5050 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4850 4850 4850
+Wire Wire Line
+	5150 5250 5150 5050
+Connection ~ 3750 5250
+Wire Wire Line
+	3750 4450 4350 4450
+Wire Wire Line
+	4350 4450 4350 4850
+Connection ~ 4350 4850
+Connection ~ 3750 4450
+Wire Wire Line
+	5150 3950 5150 4650
+$Comp
+L eSim_PNP Q6
+U 1 1 5E059C5D
+P 5900 4100
+F 0 "Q6" H 5800 4150 50  0000 R CNN
+F 1 "eSim_PNP" H 5850 4250 50  0000 R CNN
+F 2 "" H 6100 4200 29  0000 C CNN
+F 3 "" H 5900 4100 60  0000 C CNN
+	1    5900 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5450 3750 5800 3750
+Wire Wire Line
+	5800 3750 5800 3900
+Wire Wire Line
+	5800 5250 5800 4300
+Connection ~ 5150 5250
+$Comp
+L eSim_R R6
+U 1 1 5E059D24
+P 6300 4600
+F 0 "R6" H 6350 4730 50  0000 C CNN
+F 1 "50k" H 6350 4550 50  0000 C CNN
+F 2 "" H 6350 4580 30  0000 C CNN
+F 3 "" V 6350 4650 30  0000 C CNN
+	1    6300 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 4100 6500 4100
+Wire Wire Line
+	6350 4100 6350 4500
+Wire Wire Line
+	6350 5250 6350 4800
+Connection ~ 5800 5250
+$Comp
+L PORT U1
+U 5 1 5E05A060
+P 9050 3450
+F 0 "U1" H 9100 3550 30  0000 C CNN
+F 1 "PORT" H 9050 3450 30  0000 C CNN
+F 2 "" H 9050 3450 60  0000 C CNN
+F 3 "" H 9050 3450 60  0000 C CNN
+	5    9050 3450
+	-1   0    0    1   
+$EndComp
+Connection ~ 6350 4100
+$Comp
+L eSim_NPN Q7
+U 1 1 5E05A116
+P 7350 4650
+F 0 "Q7" H 7250 4700 50  0000 R CNN
+F 1 "eSim_NPN" H 7300 4800 50  0000 R CNN
+F 2 "" H 7550 4750 29  0000 C CNN
+F 3 "" H 7350 4650 60  0000 C CNN
+	1    7350 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 5250 7450 4850
+Connection ~ 6350 5250
+$Comp
+L eSim_Diode D1
+U 1 1 5E05A1E3
+P 7450 3050
+F 0 "D1" H 7450 3150 50  0000 C CNN
+F 1 "eSim_Diode" H 7450 2950 50  0000 C CNN
+F 2 "" H 7450 3050 60  0000 C CNN
+F 3 "" H 7450 3050 60  0000 C CNN
+	1    7450 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L eSim_Diode D2
+U 1 1 5E05A254
+P 7450 3750
+F 0 "D2" H 7450 3850 50  0000 C CNN
+F 1 "eSim_Diode" H 7450 3650 50  0000 C CNN
+F 2 "" H 7450 3750 60  0000 C CNN
+F 3 "" H 7450 3750 60  0000 C CNN
+	1    7450 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 3900 7450 4450
+$Comp
+L eSim_NPN Q9
+U 1 1 5E05A375
+P 8450 2600
+F 0 "Q9" H 8350 2650 50  0000 R CNN
+F 1 "eSim_NPN" H 8400 2750 50  0000 R CNN
+F 2 "" H 8650 2700 29  0000 C CNN
+F 3 "" H 8450 2600 60  0000 C CNN
+	1    8450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_NPN Q10
+U 1 1 5E05A42F
+P 8450 4650
+F 0 "Q10" H 8350 4700 50  0000 R CNN
+F 1 "eSim_NPN" H 8400 4800 50  0000 R CNN
+F 2 "" H 8650 4750 29  0000 C CNN
+F 3 "" H 8450 4650 60  0000 C CNN
+	1    8450 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5250 8550 4850
+Connection ~ 7450 5250
+Wire Wire Line
+	8550 2800 8550 4450
+Wire Wire Line
+	6450 3450 8800 3450
+Connection ~ 8550 3450
+Wire Wire Line
+	7450 3200 7450 3600
+$Comp
+L eSim_PNP Q8
+U 1 1 5E05A6BA
+P 7900 4100
+F 0 "Q8" H 7800 4150 50  0000 R CNN
+F 1 "eSim_PNP" H 7850 4250 50  0000 R CNN
+F 2 "" H 8100 4200 29  0000 C CNN
+F 3 "" H 7900 4100 60  0000 C CNN
+	1    7900 4100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7700 4100 7450 4100
+Connection ~ 7450 4100
+Wire Wire Line
+	8000 4300 8000 4650
+Wire Wire Line
+	8000 4650 8250 4650
+Wire Wire Line
+	8000 3900 8000 3600
+Wire Wire Line
+	8000 3600 8550 3600
+Connection ~ 8550 3600
+Wire Wire Line
+	7450 2600 8250 2600
+Wire Wire Line
+	3750 2350 3750 2200
+Wire Wire Line
+	3750 2200 8800 2200
+Wire Wire Line
+	8550 2200 8550 2400
+$Comp
+L PORT U1
+U 6 1 5E05ADA4
+P 9050 2200
+F 0 "U1" H 9100 2300 30  0000 C CNN
+F 1 "PORT" H 9050 2200 30  0000 C CNN
+F 2 "" H 9050 2200 60  0000 C CNN
+F 3 "" H 9050 2200 60  0000 C CNN
+	6    9050 2200
+	-1   0    0    1   
+$EndComp
+Connection ~ 8550 2200
+$Comp
+L PORT U1
+U 7 1 5E05AE99
+P 3400 2850
+F 0 "U1" H 3450 2950 30  0000 C CNN
+F 1 "PORT" H 3400 2850 30  0000 C CNN
+F 2 "" H 3400 2850 60  0000 C CNN
+F 3 "" H 3400 2850 60  0000 C CNN
+	7    3400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U1
+U 8 1 5E05B102
+P 4450 3100
+F 0 "U1" H 4500 3200 30  0000 C CNN
+F 1 "PORT" H 4450 3100 30  0000 C CNN
+F 2 "" H 4450 3100 60  0000 C CNN
+F 3 "" H 4450 3100 60  0000 C CNN
+	8    4450 3100
+	0    1    1    0   
+$EndComp
+Connection ~ 8550 5250
+Connection ~ 7450 2200
+Connection ~ 7450 2600
+Wire Wire Line
+	6800 4650 7150 4650
+Wire Wire Line
+	6800 4650 6800 5000
+Wire Wire Line
+	6800 5000 5500 5000
+Wire Wire Line
+	5500 5000 5500 4500
+Wire Wire Line
+	5500 4500 5150 4500
+Connection ~ 5150 4500
+Text Label 8650 5250 0    60   ~ 0
+Gnd
+Text Label 8600 3450 0    60   ~ 0
+Out
+Text Label 8600 2200 0    60   ~ 0
+Vcc
+Text Label 3600 2800 0    60   ~ 0
+Bypass
+Text Label 2500 3900 0    60   ~ 0
+-Input
+Text Label 6200 4050 0    60   ~ 0
++Input
+Text Label 4150 3200 0    60   ~ 0
+Gain
+Text Label 5300 3150 0    60   ~ 0
+Gain
+$Comp
+L eSim_R R8
+U 1 1 5E05BA38
+P 7400 2350
+F 0 "R8" H 7450 2480 50  0000 C CNN
+F 1 "10k" H 7450 2300 50  0000 C CNN
+F 2 "" H 7450 2330 30  0000 C CNN
+F 3 "" V 7450 2400 30  0000 C CNN
+	1    7400 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 2250 7450 2200
+Wire Wire Line
+	7450 2550 7450 2900
+$EndSCHEMATC

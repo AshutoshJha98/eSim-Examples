@@ -1,0 +1,22 @@
+* /home/ash98/eSim-Workspace/lm386-test/lm386-test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Fri Dec 27 13:36:15 2019
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+C1  Net-_C1-Pad1_ Net-_C1-Pad2_ 0.01u		
+R2  Net-_C1-Pad2_ GND 10		
+R3  Iout GND 8		
+v2  Vin GND sine		
+v1  Net-_X1-Pad6_ GND DC		
+U4  Iout Vout plot_i2		
+U3  Vout plot_v1		
+R1  Net-_R1-Pad1_ Vin 1k		
+U2  Vin plot_v1		
+X1  Net-_C3-Pad2_ GND Net-_R1-Pad1_ GND Net-_C1-Pad1_ Net-_X1-Pad6_ ? Net-_C3-Pad1_ LM_386N		
+C2  Vout Net-_C1-Pad1_ 100u		
+C3  Net-_C3-Pad1_ Net-_C3-Pad2_ 10u		
+
+.end

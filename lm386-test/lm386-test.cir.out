@@ -1,0 +1,28 @@
+* /home/ash98/esim-workspace/lm386-test/lm386-test.cir
+
+.include LM_386N.sub
+c1  net-_c1-pad1_ net-_c1-pad2_ 0.01u
+r2  net-_c1-pad2_ gnd 10
+r3  iout gnd 8
+v2  vin gnd sine(0 0.01 1000 0 0)
+v1 net-_x1-pad6_ gnd  dc 20
+* u4  iout vout plot_i2
+* u3  vout plot_v1
+r1  net-_r1-pad1_ vin 1k
+* u2  vin plot_v1
+x1 net-_c3-pad2_ gnd net-_r1-pad1_ gnd net-_c1-pad1_ net-_x1-pad6_ ? net-_c3-pad1_ LM_386N
+c2  vout net-_c1-pad1_ 100u
+c3  net-_c3-pad1_ net-_c3-pad2_ 10u
+v_u4 iout vout 0
+.tran 1e-06 15e-03 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot i(v_u4)
+plot v(vout)
+plot v(vin)
+.endc
+.end
