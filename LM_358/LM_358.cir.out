@@ -1,0 +1,54 @@
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/lm_358/lm_358.cir
+
+.include Ideal_npn2.lib
+.include Ideal_pnp2.lib
+q3 net-_q2-pad1_ net-_q2-pad1_ net-_q13-pad1_ Ideal_npn2
+q2 net-_q2-pad1_ net-_q1-pad3_ net-_q2-pad3_ Ideal_pnp2
+q4 net-_c2-pad2_ net-_q4-pad2_ net-_q2-pad3_ Ideal_pnp2
+q1 gnd /inv net-_q1-pad3_ Ideal_pnp2
+q6 gnd /non-inv net-_q4-pad2_ Ideal_pnp2
+q5 net-_c2-pad2_ net-_q2-pad1_ net-_q13-pad1_ Ideal_npn2
+q11 net-_q11-pad1_ net-_c2-pad1_ net-_q11-pad3_ Ideal_npn2
+q12 net-_q11-pad1_ net-_q11-pad3_ net-_q10-pad2_ Ideal_npn2
+q8 net-_q11-pad1_ net-_q7-pad3_ net-_q8-pad3_ Ideal_npn2
+q9 net-_c2-pad1_ net-_q8-pad3_ net-_q13-pad1_ Ideal_npn2
+q10 net-_c2-pad1_ net-_q10-pad2_ net-_q10-pad3_ Ideal_npn2
+r2  net-_q10-pad2_ net-_q10-pad3_ 30
+q13 net-_q13-pad1_ net-_c2-pad1_ net-_q10-pad3_ Ideal_pnp2
+q7 net-_q13-pad1_ net-_c2-pad2_ net-_q7-pad3_ Ideal_pnp2
+r1  net-_q8-pad3_ net-_q13-pad1_ 10k
+q16 net-_q15-pad1_ net-_q15-pad1_ net-_q13-pad1_ Ideal_npn2
+q15 net-_q15-pad1_ net-_q14-pad3_ net-_q15-pad3_ Ideal_pnp2
+q17 net-_c1-pad2_ net-_q17-pad2_ net-_q15-pad3_ Ideal_pnp2
+q14 gnd /inv net-_q14-pad3_ Ideal_pnp2
+q19 gnd /non-inv net-_q17-pad2_ Ideal_pnp2
+q18 net-_c1-pad2_ net-_q15-pad1_ net-_q13-pad1_ Ideal_npn2
+q24 net-_q11-pad1_ net-_c1-pad1_ net-_q24-pad3_ Ideal_pnp2
+q25 net-_q11-pad1_ net-_q24-pad3_ net-_q23-pad2_ Ideal_npn2
+q21 net-_q11-pad1_ net-_q20-pad3_ net-_q21-pad3_ Ideal_pnp2
+q22 net-_c1-pad1_ net-_q21-pad3_ net-_q13-pad1_ Ideal_pnp2
+q23 net-_c1-pad1_ net-_q23-pad2_ net-_q23-pad3_ Ideal_pnp2
+r4  net-_q23-pad2_ net-_q23-pad3_ 30
+q26 net-_q13-pad1_ net-_c1-pad1_ net-_q23-pad3_ Ideal_pnp2
+q20 net-_q13-pad1_ net-_c1-pad2_ net-_q20-pad3_ Ideal_pnp2
+r3  net-_q21-pad3_ net-_q13-pad1_ 10k
+* u1  net-_q10-pad2_ /inv /non-inv net-_q13-pad1_ ? /inv net-_q23-pad2_ net-_q11-pad1_ port
+r6  net-_q11-pad1_ net-_q2-pad3_ 2500k
+r8  net-_q11-pad1_ net-_q7-pad3_ 3750k
+r10  net-_q11-pad1_ net-_c2-pad1_ 1500k
+r11  net-_q23-pad2_ net-_q13-pad1_ 1500k
+r12  net-_q10-pad2_ net-_q13-pad1_ 1500k
+r5  net-_q11-pad1_ net-_q15-pad3_ 2500k
+r7  net-_q11-pad1_ net-_q20-pad3_ 3750k
+r9  net-_q11-pad1_ net-_c1-pad1_ 1500k
+c2  net-_c2-pad1_ net-_c2-pad2_ 100p
+c1  net-_c1-pad1_ net-_c1-pad2_ 100p
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

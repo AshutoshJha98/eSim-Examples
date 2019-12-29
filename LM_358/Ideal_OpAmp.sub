@@ -1,0 +1,28 @@
+* Subcircuit Ideal_OpAmp
+.subckt Ideal_OpAmp /inv /non-inv /out net-_q11-pad1_ net-_q13-pad1_ 
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/ideal_opamp/ideal_opamp.cir
+.include PNP.lib
+.include NPN.lib
+q4 net-_c1-pad2_ net-_q2-pad1_ net-_q13-pad1_ Q2N2222
+q1 gnd /inv net-_q1-pad3_ Q2N2907A
+q2 net-_q2-pad1_ net-_q1-pad3_ net-_q2-pad3_ Q2N2907A
+q6 gnd /non-inv net-_q5-pad2_ Q2N2907A
+q5 net-_c1-pad2_ net-_q5-pad2_ net-_q2-pad3_ Q2N2907A
+q3 net-_q13-pad1_ net-_q2-pad1_ net-_q2-pad1_ Q2N2222
+q11 net-_q11-pad1_ net-_c1-pad1_ net-_q11-pad3_ Q2N2222
+q12 net-_q11-pad1_ net-_q11-pad3_ net-_q10-pad2_ Q2N2222
+q13 net-_q13-pad1_ net-_c1-pad1_ /out Q2N2907A
+q10 net-_c1-pad1_ net-_q10-pad2_ /out Q2N2222
+q8 net-_q8-pad1_ net-_q7-pad3_ net-_q8-pad3_ Q2N2222
+q9 net-_c1-pad1_ net-_q8-pad3_ net-_q13-pad1_ Q2N2222
+q7 ? net-_c1-pad2_ net-_q7-pad3_ Q2N2907A
+c1  net-_c1-pad1_ net-_c1-pad2_ 50p
+r2  net-_q10-pad2_ /out 30
+r1  net-_q8-pad3_ net-_q13-pad1_ 100k
+r3  net-_q11-pad1_ net-_q2-pad3_ 300k
+r4  net-_q11-pad1_ net-_q8-pad1_ 500k
+r5  net-_q11-pad1_ net-_c1-pad1_ 50k
+r6  /out net-_q13-pad1_ 100k
+* Control Statements
+
+.ends Ideal_OpAmp
