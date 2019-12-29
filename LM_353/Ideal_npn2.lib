@@ -1,0 +1,18 @@
+.MODEL Ideal_npn2 NPN(
++  BF=200
++  BR=3
++  VTF=2
++  ITF=1
++  CJC=8E-12
++  IS=1E-14
++  IKF=0.3
++  TR=100E-9
++  CJE=25E-12
++  VAF=100
++  XTF=3
++  RE=.2
++  RB=10
++  RC=.3
++  TF=400E-12
++  XTB=1.5
+)

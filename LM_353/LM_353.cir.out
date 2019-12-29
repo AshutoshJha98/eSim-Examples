@@ -1,0 +1,58 @@
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/lm_353/lm_353.cir
+
+.include 1N914.lib
+.include Ideal_npn2.lib
+.include PJF.lib
+.include Ideal_pnp2.lib
+j1 net-_j1-pad1_ net-_j1-pad2_ net-_j1-pad3_ J2N3820
+j2 net-_j1-pad1_ net-_j2-pad2_ net-_j1-pad3_ J2N3820
+q2 net-_j1-pad1_ net-_q10-pad1_ net-_q10-pad1_ Ideal_pnp2
+q4 net-_q10-pad1_ net-_q10-pad1_ net-_j1-pad3_ Ideal_pnp2
+j3 net-_j1-pad3_ ? net-_j3-pad3_ J2N3820
+q3 net-_j1-pad3_ net-_j1-pad3_ net-_q1-pad2_ Ideal_npn2
+q1 net-_q1-pad1_ net-_q1-pad2_ net-_j1-pad3_ Ideal_npn2
+q6 net-_q6-pad1_ net-_q1-pad2_ net-_c1-pad1_ Ideal_npn2
+r3  net-_j1-pad3_ net-_c1-pad1_ 1.8k
+q5 net-_q1-pad2_ net-_d2-pad1_ net-_d2-pad2_ Ideal_npn2
+r1  net-_q1-pad1_ net-_r1-pad2_ 2k
+r4  net-_q6-pad1_ net-_r4-pad2_ 2k
+r2  net-_r1-pad2_ net-_d2-pad2_ 100
+r5  net-_r4-pad2_ net-_d2-pad2_ 100
+q8 net-_q13-pad2_ net-_d2-pad1_ net-_d2-pad2_ Ideal_npn2
+q7 net-_j1-pad3_ net-_c1-pad1_ net-_q13-pad2_ Ideal_npn2
+* u2  net-_d2-pad2_ net-_j3-pad3_ zener
+q12 net-_q11-pad1_ net-_q11-pad1_ net-_j1-pad3_ Ideal_pnp2
+d1 net-_d1-pad1_ net-_d1-pad2_ 1N914
+q11 net-_q11-pad1_ net-_j3-pad3_ net-_d1-pad1_ Ideal_npn2
+q10 net-_q10-pad1_ net-_d1-pad1_ net-_d1-pad2_ Ideal_npn2
+r6  net-_d1-pad2_ net-_d2-pad1_ 20k
+d2 net-_d2-pad1_ net-_d2-pad2_ 1N914
+q9 net-_d2-pad2_ net-_c1-pad2_ net-_c1-pad1_ Ideal_pnp2
+c1  net-_c1-pad1_ net-_c1-pad2_ 10p
+q16 net-_q11-pad1_ net-_q11-pad1_ net-_q14-pad2_ Ideal_npn2
+q14 net-_q11-pad1_ net-_q14-pad2_ net-_c1-pad2_ Ideal_npn2
+r8  net-_q14-pad2_ net-_c1-pad2_ 6k
+q13 net-_c1-pad2_ net-_q13-pad2_ net-_q13-pad3_ Ideal_npn2
+r7  net-_q13-pad3_ net-_d2-pad2_ 30
+q19 ? net-_q11-pad1_ net-_q18-pad2_ Ideal_npn2
+q18 net-_q11-pad1_ net-_q18-pad2_ net-_q17-pad3_ Ideal_npn2
+r10  net-_q18-pad2_ net-_q17-pad3_ 22
+r11  net-_q17-pad3_ net-_q17-pad2_ 30
+q17 net-_d3-pad1_ net-_q17-pad2_ net-_q17-pad3_ Ideal_pnp2
+q20 net-_d2-pad2_ net-_c1-pad2_ net-_q17-pad2_ Ideal_pnp2
+d3 net-_d3-pad1_ net-_d2-pad2_ 1N914
+q15 net-_c1-pad1_ net-_d3-pad1_ net-_q15-pad3_ Ideal_npn2
+r9  net-_q15-pad3_ net-_d2-pad2_ 160
+* u1  net-_j1-pad2_ net-_j2-pad2_ net-_q17-pad3_ net-_j1-pad3_ net-_d2-pad2_ port
+a1 net-_d2-pad2_ net-_j3-pad3_ u2
+* Schematic Name: zener, NgSpice Name: zener
+.model u2 zener(n_forward=1.0 v_breakdown=5.6 i_sat=1.0e-12 limit_switch=FALSE i_breakdown=2.0e-2 ) 
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
