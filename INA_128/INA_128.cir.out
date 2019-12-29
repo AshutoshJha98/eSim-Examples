@@ -1,0 +1,22 @@
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/ina_128/ina_128.cir
+
+.include lm_741.sub
+x1 ? net-_r1-pad1_ /-vin net-_u1-pad4_ ? net-_r1-pad2_ net-_u1-pad7_ ? lm_741
+x2 ? net-_r2-pad1_ /+vin net-_u1-pad4_ ? net-_r2-pad2_ net-_u1-pad7_ ? lm_741
+x3 ? net-_r3-pad2_ net-_r4-pad2_ net-_u1-pad4_ ? net-_r5-pad2_ net-_u1-pad7_ ? lm_741
+r1  net-_r1-pad1_ net-_r1-pad2_ 25k
+r2  net-_r2-pad1_ net-_r2-pad2_ 25k
+r4  net-_r2-pad2_ net-_r4-pad2_ 40k
+r3  net-_r1-pad2_ net-_r3-pad2_ 40k
+r5  net-_r3-pad2_ net-_r5-pad2_ 40k
+r6  net-_r4-pad2_ /ref 40k
+* u1  net-_r1-pad1_ /-vin /+vin net-_u1-pad4_ /ref net-_r5-pad2_ net-_u1-pad7_ net-_r2-pad1_ port
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
