@@ -1,0 +1,17 @@
+* /home/ash98/Downloads/eSim-master/src/SubcircuitLibrary/BPW_46/BPW_46.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Tue Dec 31 10:40:10 2019
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+G1  Net-_C1-Pad1_ Net-_C1-Pad2_ Net-_G1-Pad3_ Net-_C1-Pad2_ 1		
+U1  Net-_R2-Pad2_ Net-_C1-Pad2_ Net-_C1-Pad2_ Net-_G1-Pad3_ PORT		
+I1  Net-_C1-Pad1_ Net-_C1-Pad2_ 2n		
+D1  Net-_C1-Pad1_ Net-_C1-Pad2_ eSim_Diode		
+C1  Net-_C1-Pad1_ Net-_C1-Pad2_ 50p		
+R1  Net-_C1-Pad2_ Net-_C1-Pad1_ 3500M		
+R2  Net-_C1-Pad1_ Net-_R2-Pad2_ 7.2k		
+
+.end

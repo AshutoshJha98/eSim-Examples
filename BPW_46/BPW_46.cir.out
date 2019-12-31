@@ -1,0 +1,19 @@
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/bpw_46/bpw_46.cir
+
+.include 1N914D.lib
+g1  net-_c1-pad1_ net-_c1-pad2_ net-_g1-pad3_ net-_c1-pad2_ 1
+* u1  net-_r2-pad2_ net-_c1-pad2_ net-_c1-pad2_ net-_g1-pad3_ port
+i1  net-_c1-pad1_ net-_c1-pad2_ 2n
+d1 net-_c1-pad1_ net-_c1-pad2_ 1N914
+c1  net-_c1-pad1_ net-_c1-pad2_ 50p
+r1  net-_c1-pad2_ net-_c1-pad1_ 3500m
+r2  net-_c1-pad1_ net-_r2-pad2_ 7.2k
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
