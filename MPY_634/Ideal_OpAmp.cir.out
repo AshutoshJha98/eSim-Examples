@@ -1,0 +1,30 @@
+* /home/ash98/downloads/esim-master/src/subcircuitlibrary/ideal_opamp/ideal_opamp.cir
+
+.include 1N914.lib
+.include Ideal_npn2.lib
+.include Ideal_pnp2.lib
+q3 net-_q2-pad1_ net-_q2-pad1_ net-_q3-pad3_ Ideal_pnp2
+q5 net-_c1-pad2_ net-_q2-pad1_ net-_q3-pad3_ Ideal_pnp2
+q2 net-_q2-pad1_ /inv net-_q2-pad3_ Ideal_npn2
+q6 net-_c1-pad2_ /non-inv net-_q2-pad3_ Ideal_npn2
+q4 net-_q2-pad3_ net-_q1-pad1_ net-_q1-pad3_ Ideal_npn2
+q1 net-_q1-pad1_ net-_q1-pad1_ net-_q1-pad3_ Ideal_npn2
+r1  net-_q3-pad3_ net-_q1-pad1_ 9.8k
+r2  net-_q3-pad3_ net-_d1-pad1_ 5.11k
+q7 net-_c1-pad1_ net-_c1-pad2_ net-_q3-pad3_ Ideal_pnp2
+d1 net-_d1-pad1_ net-_d1-pad2_ 1N914
+c1  net-_c1-pad1_ net-_c1-pad2_ 400p
+r3  net-_d1-pad2_ net-_q1-pad3_ 20
+q8 net-_c1-pad1_ net-_d1-pad1_ net-_q1-pad3_ Ideal_npn2
+q9 net-_q3-pad3_ net-_c1-pad1_ /out Ideal_npn2
+q10 /out net-_d1-pad1_ net-_q1-pad3_ Ideal_npn2
+* u1  /inv /non-inv /out net-_q3-pad3_ net-_q1-pad3_ port
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

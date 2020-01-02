@@ -1,0 +1,29 @@
+.MODEL Ideal_pnp1 PNP(
++ Vtf=1e12
++ Cjc=0
++ Nc=2 
++ Tr=0
++ Ne=1.5
++ Cje=0
++ Isc=0 
++ Xtb=0
++ Rb=0
++ Rc=0
++ Tf=0
++ Xti=3 
++ Ikr=0 
++ Bf=1e12
++ Fc=.5 
++ Ise=0
++ Br=1
++ Ikf=1e12
++ Mje=0.33
++ Mjc=0.33
++ Vaf=1e12
++ Vjc=.75 
++ Vje=.75 
++ Xtf=0
++ Itf=0
++ Is=1e-16
++ Eg=1.11 
+)
