@@ -1,0 +1,72 @@
+* /home/ash98/eSim-Workspace/Therm2binary/Therm2binary.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Fri Jan  3 16:02:24 2020
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U2  Ref2 plot_v1		
+U3  Ref3 plot_v1		
+U1  Ref1 plot_v1		
+X1  ? Net-_R5-Pad1_ Net-_R6-Pad1_ Net-_X1-Pad4_ ? Out1 Net-_X1-Pad7_ ? lm_741		
+R5  Net-_R5-Pad1_ Ref1 1k		
+X2  ? Net-_R7-Pad1_ Net-_R8-Pad1_ Net-_X1-Pad4_ ? Out2 Net-_X1-Pad7_ ? lm_741		
+R7  Net-_R7-Pad1_ Ref2 1k		
+X3  ? Net-_R9-Pad1_ Net-_R10-Pad1_ Net-_X1-Pad4_ ? Out3 Net-_X1-Pad7_ ? lm_741		
+R9  Net-_R9-Pad1_ Ref3 1k		
+R6  Net-_R6-Pad1_ V_In 1k		
+R8  Net-_R8-Pad1_ V_In 1k		
+R10  Net-_R10-Pad1_ V_In 1k		
+R11  Net-_R11-Pad1_ Out1 1k		
+R12  Net-_R12-Pad1_ Out2 1k		
+R13  Net-_R13-Pad1_ Out3 1k		
+v3  Net-_X1-Pad7_ GND 6		
+U4  Out1 plot_v1		
+U5  Out2 plot_v1		
+U6  Out3 plot_v1		
+v4  GND Net-_X1-Pad4_ 6		
+U12  V_In plot_v1		
+v1  Ref1 GND 7		
+v5  Ref2 GND 6		
+v6  Ref3 GND 5		
+U7  Ref4 plot_v1		
+X4  ? Net-_R1-Pad1_ Net-_R2-Pad1_ Net-_X1-Pad4_ ? Out4 Net-_X1-Pad7_ ? lm_741		
+R1  Net-_R1-Pad1_ Ref4 1k		
+R2  Net-_R2-Pad1_ V_In 1k		
+R20  Net-_R20-Pad1_ Out4 1k		
+U13  Out4 plot_v1		
+v7  Ref4 GND 4		
+U9  Ref6 plot_v1		
+U10  Ref7 plot_v1		
+U8  Ref5 plot_v1		
+X5  ? Net-_R3-Pad1_ Net-_R4-Pad1_ Net-_X1-Pad4_ ? Out5 Net-_X1-Pad7_ ? lm_741		
+R3  Net-_R3-Pad1_ Ref5 1k		
+X6  ? Net-_R14-Pad1_ Net-_R15-Pad1_ Net-_X1-Pad4_ ? Out6 Net-_X1-Pad7_ ? lm_741		
+R14  Net-_R14-Pad1_ Ref6 1k		
+X7  ? Net-_R16-Pad1_ Net-_R17-Pad1_ Net-_X1-Pad4_ ? Out7 Net-_X1-Pad7_ ? lm_741		
+R16  Net-_R16-Pad1_ Ref7 1k		
+R4  Net-_R4-Pad1_ V_In 1k		
+R15  Net-_R15-Pad1_ V_In 1k		
+R17  Net-_R17-Pad1_ V_In 1k		
+R21  Net-_R21-Pad1_ Out5 1k		
+R22  Net-_R22-Pad1_ Out6 1k		
+R23  Net-_R23-Pad1_ Out7 1k		
+U14  Out5 plot_v1		
+U15  Out6 plot_v1		
+U16  Out7 plot_v1		
+v8  Ref5 GND 3		
+v9  Ref6 GND 2		
+v10  Ref7 GND 1		
+R25  GND Bin1 1k		
+R26  GND Bin2 1k		
+R27  GND Bin3 1k		
+U20  Bin1 plot_v1		
+U21  Bin2 plot_v1		
+U22  Bin3 plot_v1		
+U23  Net-_U11-Pad8_ Net-_U11-Pad9_ Net-_U11-Pad10_ Bin1 Bin2 Bin3 dac_bridge_3		
+U17  Net-_R11-Pad1_ Net-_R12-Pad1_ Net-_R13-Pad1_ Net-_R20-Pad1_ Net-_R21-Pad1_ Net-_R22-Pad1_ Net-_R23-Pad1_ Net-_U11-Pad1_ Net-_U11-Pad2_ Net-_U11-Pad3_ Net-_U11-Pad4_ Net-_U11-Pad5_ Net-_U11-Pad6_ Net-_U11-Pad7_ adc_bridge_7		
+v2  V_In GND DC		
+U11  Net-_U11-Pad1_ Net-_U11-Pad2_ Net-_U11-Pad3_ Net-_U11-Pad4_ Net-_U11-Pad5_ Net-_U11-Pad6_ Net-_U11-Pad7_ Net-_U11-Pad8_ Net-_U11-Pad9_ Net-_U11-Pad10_ therm2bin4bit		
+
+.end
