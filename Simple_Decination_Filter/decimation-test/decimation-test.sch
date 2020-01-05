@@ -1,0 +1,188 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_User
+LIBS:eSim_Plot
+LIBS:eSim_PSpice
+LIBS:eSim_Nghdl
+LIBS:decimation-test-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L adc_bridge_1 U2
+U 1 1 5E11B947
+P 4650 3550
+F 0 "U2" H 4650 3550 60  0000 C CNN
+F 1 "adc_bridge_1" H 4650 3700 60  0000 C CNN
+F 2 "" H 4650 3550 60  0000 C CNN
+F 3 "" H 4650 3550 60  0000 C CNN
+	1    4650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L dac_bridge_1 U3
+U 1 1 5E11B9C2
+P 6800 3550
+F 0 "U3" H 6800 3550 60  0000 C CNN
+F 1 "dac_bridge_1" H 6800 3700 60  0000 C CNN
+F 2 "" H 6800 3550 60  0000 C CNN
+F 3 "" H 6800 3550 60  0000 C CNN
+	1    6800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_R R1
+U 1 1 5E11BA1B
+P 3700 3550
+F 0 "R1" H 3750 3680 50  0000 C CNN
+F 1 "1k" H 3750 3500 50  0000 C CNN
+F 2 "" H 3750 3530 30  0000 C CNN
+F 3 "" V 3750 3600 30  0000 C CNN
+	1    3700 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3500 4050 3500
+$Comp
+L pulse v1
+U 1 1 5E11BA65
+P 3300 3950
+F 0 "v1" H 3100 4050 60  0000 C CNN
+F 1 "pulse" H 3100 3900 60  0000 C CNN
+F 2 "R1" H 3000 3950 60  0000 C CNN
+F 3 "" H 3300 3950 60  0000 C CNN
+	1    3300 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3500 3600 3500
+$Comp
+L eSim_R R2
+U 1 1 5E11BACD
+P 7750 3800
+F 0 "R2" H 7800 3930 50  0000 C CNN
+F 1 "1k" H 7800 3750 50  0000 C CNN
+F 2 "" H 7800 3780 30  0000 C CNN
+F 3 "" V 7800 3850 30  0000 C CNN
+	1    7750 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 3450 7800 3700
+Wire Wire Line
+	7350 3500 7900 3500
+$Comp
+L GND #PWR01
+U 1 1 5E11BB37
+P 7800 4100
+F 0 "#PWR01" H 7800 3850 50  0001 C CNN
+F 1 "GND" H 7800 3950 50  0000 C CNN
+F 2 "" H 7800 4100 50  0001 C CNN
+F 3 "" H 7800 4100 50  0001 C CNN
+	1    7800 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4000 7800 4100
+$Comp
+L GND #PWR02
+U 1 1 5E11BB6E
+P 3300 4500
+F 0 "#PWR02" H 3300 4250 50  0001 C CNN
+F 1 "GND" H 3300 4350 50  0000 C CNN
+F 2 "" H 3300 4500 50  0001 C CNN
+F 3 "" H 3300 4500 50  0001 C CNN
+	1    3300 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4500 3300 4400
+$Comp
+L decimation_filter U1
+U 1 1 5E11BA14
+P 2850 5400
+F 0 "U1" H 5700 7200 60  0000 C CNN
+F 1 "decimation_filter" H 5700 7400 60  0000 C CNN
+F 2 "" H 5700 7350 60  0000 C CNN
+F 3 "" H 5700 7350 60  0000 C CNN
+	1    2850 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L plot_v1 U4
+U 1 1 5E11BAD3
+P 3350 3550
+F 0 "U4" H 3350 4050 60  0000 C CNN
+F 1 "plot_v1" H 3550 3900 60  0000 C CNN
+F 2 "" H 3350 3550 60  0000 C CNN
+F 3 "" H 3350 3550 60  0000 C CNN
+	1    3350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3350 3350 3500
+Connection ~ 3350 3500
+Text GLabel 3200 3500 0    60   Input ~ 0
+In
+Connection ~ 3300 3500
+$Comp
+L plot_v1 U5
+U 1 1 5E11BB9A
+P 7800 3650
+F 0 "U5" H 7800 4150 60  0000 C CNN
+F 1 "plot_v1" H 8000 4000 60  0000 C CNN
+F 2 "" H 7800 3650 60  0000 C CNN
+F 3 "" H 7800 3650 60  0000 C CNN
+	1    7800 3650
+	1    0    0    -1  
+$EndComp
+Connection ~ 7800 3500
+Text GLabel 7900 3500 2    60   Input ~ 0
+Out
+$EndSCHEMATC

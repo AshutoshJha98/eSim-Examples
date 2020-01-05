@@ -1,0 +1,18 @@
+* /home/ash98/eSim-Workspace/decimation-test/decimation-test.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sun Jan  5 15:57:30 2020
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U2  Net-_R1-Pad2_ Net-_U1-Pad1_ adc_bridge_1		
+U3  Net-_U1-Pad2_ Out dac_bridge_1		
+R1  In Net-_R1-Pad2_ 1k		
+v1  In GND pulse		
+R2  Out GND 1k		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ decimation_filter		
+U4  In plot_v1		
+U5  Out plot_v1		
+
+.end
