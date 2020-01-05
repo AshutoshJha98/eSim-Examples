@@ -9,7 +9,7 @@ end decimation_filter;
 
 architecture beh of decimation_filter is
 	signal t1: integer range 0 to 255 ;
-	signal t2: std_logic;
+--	signal t2: std_logic;
 begin
 	process(a)
 	begin
