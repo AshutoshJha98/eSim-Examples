@@ -14,7 +14,7 @@ begin
 	begin
 		if rising_edge(a) then
 			t1 <= t1 + 1;
-			if (t1 rem 4 = 3) then			--remainder after division by decimation factor (k) should be (k-1)
+			if (t1 rem 2 = 1) then			--remainder after division by decimation factor (k) should be (k-1)
 				b <= '0';
 			else
 				b <= a;
